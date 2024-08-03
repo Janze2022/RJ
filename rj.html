@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love for Rose Jean Garzon</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Lora', serif;
+            background: url('https://scontent.fcgy3-1.fna.fbcdn.net/v/t1.6435-9/129815794_195731148910348_8491521196038507312_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeFNxI-8BJxp4RHi-NPEOqmSvJLkcY8skmm8kuRxjyySaQmk3ZlRmo2lNoQJwXSWeEuSmZvBOaB33O3h1TMT1e_n&_nc_ohc=4sSqYlndaX0Q7kNvgHyQm5w&_nc_ht=scontent.fcgy3-1.fna&oh=00_AYCcs0EppaBV8zgWybVhdqB0zrEjeKoXqK_maHtSaeAKpw&oe=66D58323') no-repeat center center fixed; 
+            background-size: cover;
+            color: #fff;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            background-color: #fbe6f0; /* Light pink background */
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4em;
+            margin: 20px 0;
+            color: #e91e63; /* Pink color */
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+            animation: pulse 2s infinite;
+        }
+
+        .heart {
+            font-size: 10em;
+            color: #e91e63; /* Pink color */
+            margin: 20px 0;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        .container {
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+            border-radius: 20px;
+            display: inline-block;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            margin: 20px;
+            animation: slideIn 1s ease-out;
+            max-width: 80%;
+            overflow: hidden;
+        }
+
+        .content {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            font-family: 'Lora', serif;
+        }
+
+        .quote {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5em;
+            color: #e91e63; /* Pink color */
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            animation: fadeIn 2s ease-in;
+            max-width: 80%;
+        }
+
+        .quote:nth-of-type(odd) {
+            animation-delay: 1s;
+        }
+
+        .quote:nth-of-type(even) {
+            animation-delay: 2s;
+        }
+
+        .footer {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #333;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 80%;
+            margin: 20px auto;
+            font-family: 'Lora', serif;
+        }
+
+        .button {
+            display: inline-block;
+            margin: 20px;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            color: #fff;
+            background-color: #e91e63; /* Pink color */
+            border: none;
+            border-radius: 12px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            outline: none;
+            animation: bounce 1s infinite;
+        }
+
+        .button:hover {
+            background-color: #d81b60; /* Darker pink color */
+            transform: scale(1.05);
+        }
+
+        .button:active {
+            transform: scale(0.95);
+        }
+
+        .question-section {
+            position: fixed;
+            top: 20%;
+            right: 2%;
+            width: 300px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 100;
+            max-height: 80vh;
+            overflow-y: auto;
+            animation: slideInFromRight 1s ease-out;
+        }
+
+        .question {
+            margin-bottom: 15px;
+            font-family: 'Lora', serif;
+            font-size: 1.2em;
+            color: #e91e63; /* Pink color */
+            animation: fadeIn 1s ease-out;
+        }
+
+        .question:nth-of-type(1) {
+            animation-delay: 0.5s;
+        }
+
+        .question:nth-of-type(2) {
+            animation-delay: 1s;
+        }
+
+        .question:nth-of-type(3) {
+            animation-delay: 1.5s;
+        }
+
+        .answer-buttons {
+            margin-top: 10px;
+        }
+
+        .answer-buttons button {
+            font-size: 1em;
+            padding: 10px 20px;
+            margin: 5px;
+            color: #fff;
+            background-color: #e91e63; /* Pink color */
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .answer-buttons button:hover {
+            background-color: #d81b60; /* Darker pink color */
+            transform: scale(1.05);
+        }
+
+        .answer-buttons button:active {
+            transform: scale(0.95);
+        }
+
+        .celebration {
+            display: none;
+            font-size: 5em;
+            color: #e91e63; /* Pink color */
+            text-align: center;
+            margin: 20px 0;
+            animation: celebrate 1s ease-out;
+        }
+
+        .crying-section {
+            display: none;
+            font-size: 5em;
+            color: #e91e63; /* Pink color */
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes slideInFromRight {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+
+        @keyframes celebrate {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <h1>My Unconditional Love for Rose Jean Garzon</h1>
+    <div class="heart">❤️</div>
+    
+    <div class="container">
+        <div class="content">
+            <p>Dear Rose Jean Garzon,</p>
+            <p>My love for you is endless and unconditional. You bring so much joy and happiness into my life. Every moment spent with you is a treasure, and I cherish every second of it. You are my everything, and I am so grateful to have you by my side.</p>
+            <p>With all my love,</p>
+            <p>Janze Salva</p>
+        </div>
+
+        <div class="quote">
+            <p>"I have waited for this opportunity for more than half a century, to repeat to you once again my vow of eternal fidelity and everlasting love."</p>
+            <p>- Gabriel Garcia Marquez</p>
+        </div>
+        
+        <div class="quote">
+            <p>"You are my sun, my moon, and all my stars."</p>
+            <p>- E.E. Cummings</p>
+        </div>
+        
+        <div class="quote">
+            <p>"Whatever our souls are made of, his and mine are the same."</p>
+            <p>- Emily Brontë</p>
+        </div>
+
+        <div class="quote">
+            <p>"Love is not about how many days, months, or years you have been together. Love is about how much you love each other every single day."</p>
+            <p>- Ctto</p>
+        </div>
+        
+        <div class="quote">
+            <p>"Every love story is beautiful, but ours is my favorite."</p>
+            <p>- Ctto</p>
+        </div>
+    </div>
+
+    <a href="#" class="button" onclick="showPrompt()">Send a Love Note</a>
+
+    <div class="footer">
+        <p>Created with ❤️ by Janze Salva</p>
+    </div>
+
+    <div class="question-section">
+        <div class="question">Do you love Janze?</div>
+        <div class="answer-buttons">
+            <button onclick="answerQuestion('love', 'yes')">Yes</button>
+            <button onclick="answerQuestion('love', 'no')">No</button>
+        </div>
+
+        <div class="question">Will you date Janze?</div>
+        <div class="answer-buttons">
+            <button onclick="answerQuestion('date', 'yes')">Yes</button>
+            <button onclick="answerQuestion('date', 'no')">No</button>
+        </div>
+
+        <div class="question">Will you marry Janze?</div>
+        <div class="answer-buttons">
+            <button onclick="answerQuestion('marry', 'yes')">Yes</button>
+            <button onclick="answerQuestion('marry', 'no')">No</button>
+        </div>
+
+        <div class="celebration" id="celebration">
+            ❤️🎉
+        </div>
+        <div class="crying-section" id="crying-section">
+            😢💔
+        </div>
+    </div>
+
+    <script>
+        let answers = {
+            love: false,
+            date: false,
+            marry: false
+        };
+
+        let noCount = 0; // Counter for "No" answers
+
+        function answerQuestion(type, answer) {
+            if (answer === 'no') {
+                noCount++;
+                if (noCount >= 3) {
+                    document.getElementById('crying-section').style.display = 'block';
+                    return; // Exit early if 3 "No" answers have been given
+                }
+            }
+            
+            answers[type] = (answer === 'yes');
+            if (answers.love && answers.date && answers.marry) {
+                document.getElementById('celebration').style.display = 'block';
+                document.getElementById('crying-section').style.display = 'none'; // Hide crying section
+            } else {
+                document.getElementById('celebration').style.display = 'none';
+            }
+        }
+
+        function showPrompt() {
+            const userConfirmed = confirm("Click OK to open Gmail and send a love note to Janze Salva.");
+            if (userConfirmed) {
+                const email = "janzedoysabas@gmail.com";
+                const subject = "Love Note";
+                const body = "Dear Janze Salva,\n\nI am writing this love note to you because...";
+                const mailtoLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(email)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                window.open(mailtoLink, '_blank');
+            }
+        }
+    </script>
+</body>
+</html>
